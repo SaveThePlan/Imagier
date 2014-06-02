@@ -58,7 +58,8 @@
                                   duration:[[UIApplication sharedApplication] statusBarOrientationAnimationDuration]];
     
     //init first image
-    [self sendPictureToView:[imageNames objectAtIndex:0]];
+//    [self sendPictureToView:[imageNames objectAtIndex:0]];
+    [self stepperAction];
 
 }
 
@@ -92,7 +93,6 @@
 
     [[self view] setBackgroundColor:[UIColor colorWithPatternImage:background]];
     
-    [mainView setMaxInitialWidth:(screenSize.width - 2 * margin)];
 }
 
 - (void)didReceiveMemoryWarning
@@ -113,11 +113,15 @@
     
     if(isLandscape){
         [[self view] setFrame:CGRectMake(0, 0, screenBounds.size.height, screenBounds.size.width)];
+        [mainView setMaxInitialWidth:(screenBounds.size.height - 2 * margin)];
     } else {
         [[self view] setFrame:CGRectMake(0, 0, screenBounds.size.width, screenBounds.size.height)];
+        [mainView setMaxInitialWidth:(screenBounds.size.width - 2 * margin)];
     }
+
     
     [mainView drawForIpadDevice:isIpad inLandscape:isLandscape];
+    [self stepperAction];
 }
 
 
