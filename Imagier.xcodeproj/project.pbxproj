@@ -7,6 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE57D72D19335571008F9903 /* STPImagierView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE57D72C19335571008F9903 /* STPImagierView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CE57D73219335649008F9903 /* STPLayoutConstraintBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = CE57D72F19335649008F9903 /* STPLayoutConstraintBuilder.m */; };
+		CE65E07519348BF400D3BBC7 /* photo-01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE65E06119348BF400D3BBC7 /* photo-01.jpg */; };
+		CE65E07619348BF400D3BBC7 /* photo-02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE65E06219348BF400D3BBC7 /* photo-02.jpg */; };
+		CE65E07719348BF400D3BBC7 /* photo-03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE65E06319348BF400D3BBC7 /* photo-03.jpg */; };
+		CE65E07819348BF400D3BBC7 /* photo-04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE65E06419348BF400D3BBC7 /* photo-04.jpg */; };
+		CE65E07919348BF400D3BBC7 /* photo-05.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE65E06519348BF400D3BBC7 /* photo-05.jpg */; };
+		CE65E07A19348BF400D3BBC7 /* photo-06.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE65E06619348BF400D3BBC7 /* photo-06.jpg */; };
+		CE65E07B19348BF400D3BBC7 /* photo-07.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE65E06719348BF400D3BBC7 /* photo-07.jpg */; };
+		CE65E07C19348BF400D3BBC7 /* photo-08.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE65E06819348BF400D3BBC7 /* photo-08.jpg */; };
+		CE65E07D19348BF400D3BBC7 /* photo-09.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE65E06919348BF400D3BBC7 /* photo-09.jpg */; };
+		CE65E07E19348BF400D3BBC7 /* photo-10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE65E06A19348BF400D3BBC7 /* photo-10.jpg */; };
+		CE65E07F19348BF400D3BBC7 /* photo-11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE65E06B19348BF400D3BBC7 /* photo-11.jpg */; };
+		CE65E08019348BF400D3BBC7 /* photo-12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE65E06C19348BF400D3BBC7 /* photo-12.jpg */; };
+		CE65E08119348BF400D3BBC7 /* photo-13.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE65E06D19348BF400D3BBC7 /* photo-13.jpg */; };
+		CE65E08219348BF400D3BBC7 /* photo-14.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE65E06E19348BF400D3BBC7 /* photo-14.jpg */; };
+		CE65E08319348BF400D3BBC7 /* photo-15.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE65E06F19348BF400D3BBC7 /* photo-15.jpg */; };
+		CE65E08419348BF400D3BBC7 /* photo-16.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE65E07019348BF400D3BBC7 /* photo-16.jpg */; };
+		CE65E08519348BF400D3BBC7 /* photo-17.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE65E07119348BF400D3BBC7 /* photo-17.jpg */; };
+		CE65E08619348BF400D3BBC7 /* photo-18.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE65E07219348BF400D3BBC7 /* photo-18.jpg */; };
+		CE65E08719348BF400D3BBC7 /* photo-19.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE65E07319348BF400D3BBC7 /* photo-19.jpg */; };
+		CE65E08819348BF400D3BBC7 /* photo-20.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE65E07419348BF400D3BBC7 /* photo-20.jpg */; };
 		CE7CF84D193353D90027C76F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7CF84C193353D90027C76F /* Foundation.framework */; };
 		CE7CF84F193353D90027C76F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7CF84E193353D90027C76F /* CoreGraphics.framework */; };
 		CE7CF851193353D90027C76F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7CF850193353D90027C76F /* UIKit.framework */; };
@@ -15,13 +37,16 @@
 		CE7CF85D193353D90027C76F /* STPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7CF85C193353D90027C76F /* STPAppDelegate.m */; };
 		CE7CF860193353D90027C76F /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE7CF85E193353D90027C76F /* Main_iPhone.storyboard */; };
 		CE7CF863193353D90027C76F /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE7CF861193353D90027C76F /* Main_iPad.storyboard */; };
-		CE7CF866193353D90027C76F /* STPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7CF865193353D90027C76F /* STPViewController.m */; };
+		CE7CF866193353D90027C76F /* STPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7CF865193353D90027C76F /* STPViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CE7CF868193353D90027C76F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE7CF867193353D90027C76F /* Images.xcassets */; };
 		CE7CF86F193353D90027C76F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7CF86E193353D90027C76F /* XCTest.framework */; };
 		CE7CF870193353D90027C76F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7CF84C193353D90027C76F /* Foundation.framework */; };
 		CE7CF871193353D90027C76F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7CF850193353D90027C76F /* UIKit.framework */; };
 		CE7CF879193353D90027C76F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE7CF877193353D90027C76F /* InfoPlist.strings */; };
 		CE7CF87B193353D90027C76F /* ImagierTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7CF87A193353D90027C76F /* ImagierTests.m */; };
+		CEF5C4FE1933866000393346 /* fond-1024x1024.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEF5C4FB1933866000393346 /* fond-1024x1024.jpg */; };
+		CEF5C4FF1933866000393346 /* fond-1136x1136.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEF5C4FC1933866000393346 /* fond-1136x1136.jpg */; };
+		CEF5C5001933866000393346 /* fond-2048x2048.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEF5C4FD1933866000393346 /* fond-2048x2048.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +60,30 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE57D72B19335571008F9903 /* STPImagierView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPImagierView.h; sourceTree = "<group>"; };
+		CE57D72C19335571008F9903 /* STPImagierView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPImagierView.m; sourceTree = "<group>"; };
+		CE57D72E19335649008F9903 /* STPLayoutConstraintBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPLayoutConstraintBuilder.h; sourceTree = "<group>"; };
+		CE57D72F19335649008F9903 /* STPLayoutConstraintBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPLayoutConstraintBuilder.m; sourceTree = "<group>"; };
+		CE65E06119348BF400D3BBC7 /* photo-01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-01.jpg"; sourceTree = "<group>"; };
+		CE65E06219348BF400D3BBC7 /* photo-02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-02.jpg"; sourceTree = "<group>"; };
+		CE65E06319348BF400D3BBC7 /* photo-03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-03.jpg"; sourceTree = "<group>"; };
+		CE65E06419348BF400D3BBC7 /* photo-04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-04.jpg"; sourceTree = "<group>"; };
+		CE65E06519348BF400D3BBC7 /* photo-05.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-05.jpg"; sourceTree = "<group>"; };
+		CE65E06619348BF400D3BBC7 /* photo-06.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-06.jpg"; sourceTree = "<group>"; };
+		CE65E06719348BF400D3BBC7 /* photo-07.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-07.jpg"; sourceTree = "<group>"; };
+		CE65E06819348BF400D3BBC7 /* photo-08.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-08.jpg"; sourceTree = "<group>"; };
+		CE65E06919348BF400D3BBC7 /* photo-09.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-09.jpg"; sourceTree = "<group>"; };
+		CE65E06A19348BF400D3BBC7 /* photo-10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-10.jpg"; sourceTree = "<group>"; };
+		CE65E06B19348BF400D3BBC7 /* photo-11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-11.jpg"; sourceTree = "<group>"; };
+		CE65E06C19348BF400D3BBC7 /* photo-12.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-12.jpg"; sourceTree = "<group>"; };
+		CE65E06D19348BF400D3BBC7 /* photo-13.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-13.jpg"; sourceTree = "<group>"; };
+		CE65E06E19348BF400D3BBC7 /* photo-14.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-14.jpg"; sourceTree = "<group>"; };
+		CE65E06F19348BF400D3BBC7 /* photo-15.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-15.jpg"; sourceTree = "<group>"; };
+		CE65E07019348BF400D3BBC7 /* photo-16.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-16.jpg"; sourceTree = "<group>"; };
+		CE65E07119348BF400D3BBC7 /* photo-17.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-17.jpg"; sourceTree = "<group>"; };
+		CE65E07219348BF400D3BBC7 /* photo-18.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-18.jpg"; sourceTree = "<group>"; };
+		CE65E07319348BF400D3BBC7 /* photo-19.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-19.jpg"; sourceTree = "<group>"; };
+		CE65E07419348BF400D3BBC7 /* photo-20.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-20.jpg"; sourceTree = "<group>"; };
 		CE7CF849193353D90027C76F /* Imagier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Imagier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE7CF84C193353D90027C76F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CE7CF84E193353D90027C76F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -55,6 +104,9 @@
 		CE7CF876193353D90027C76F /* ImagierTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ImagierTests-Info.plist"; sourceTree = "<group>"; };
 		CE7CF878193353D90027C76F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CE7CF87A193353D90027C76F /* ImagierTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImagierTests.m; sourceTree = "<group>"; };
+		CEF5C4FB1933866000393346 /* fond-1024x1024.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "fond-1024x1024.jpg"; sourceTree = "<group>"; };
+		CEF5C4FC1933866000393346 /* fond-1136x1136.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "fond-1136x1136.jpg"; sourceTree = "<group>"; };
+		CEF5C4FD1933866000393346 /* fond-2048x2048.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "fond-2048x2048.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +133,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE65E06019348BAF00D3BBC7 /* pictures */ = {
+			isa = PBXGroup;
+			children = (
+				CE65E06119348BF400D3BBC7 /* photo-01.jpg */,
+				CE65E06219348BF400D3BBC7 /* photo-02.jpg */,
+				CE65E06319348BF400D3BBC7 /* photo-03.jpg */,
+				CE65E06419348BF400D3BBC7 /* photo-04.jpg */,
+				CE65E06519348BF400D3BBC7 /* photo-05.jpg */,
+				CE65E06619348BF400D3BBC7 /* photo-06.jpg */,
+				CE65E06719348BF400D3BBC7 /* photo-07.jpg */,
+				CE65E06819348BF400D3BBC7 /* photo-08.jpg */,
+				CE65E06919348BF400D3BBC7 /* photo-09.jpg */,
+				CE65E06A19348BF400D3BBC7 /* photo-10.jpg */,
+				CE65E06B19348BF400D3BBC7 /* photo-11.jpg */,
+				CE65E06C19348BF400D3BBC7 /* photo-12.jpg */,
+				CE65E06D19348BF400D3BBC7 /* photo-13.jpg */,
+				CE65E06E19348BF400D3BBC7 /* photo-14.jpg */,
+				CE65E06F19348BF400D3BBC7 /* photo-15.jpg */,
+				CE65E07019348BF400D3BBC7 /* photo-16.jpg */,
+				CE65E07119348BF400D3BBC7 /* photo-17.jpg */,
+				CE65E07219348BF400D3BBC7 /* photo-18.jpg */,
+				CE65E07319348BF400D3BBC7 /* photo-19.jpg */,
+				CE65E07419348BF400D3BBC7 /* photo-20.jpg */,
+			);
+			name = pictures;
+			sourceTree = "<group>";
+		};
 		CE7CF840193353D90027C76F = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +199,11 @@
 				CE7CF861193353D90027C76F /* Main_iPad.storyboard */,
 				CE7CF864193353D90027C76F /* STPViewController.h */,
 				CE7CF865193353D90027C76F /* STPViewController.m */,
+				CEF5C5011933866B00393346 /* images */,
+				CE57D72B19335571008F9903 /* STPImagierView.h */,
+				CE57D72C19335571008F9903 /* STPImagierView.m */,
+				CE57D72E19335649008F9903 /* STPLayoutConstraintBuilder.h */,
+				CE57D72F19335649008F9903 /* STPLayoutConstraintBuilder.m */,
 				CE7CF867193353D90027C76F /* Images.xcassets */,
 				CE7CF853193353D90027C76F /* Supporting Files */,
 			);
@@ -153,6 +237,25 @@
 				CE7CF877193353D90027C76F /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CEF5C5011933866B00393346 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				CE65E06019348BAF00D3BBC7 /* pictures */,
+				CEF5C5021933867E00393346 /* bg */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		CEF5C5021933867E00393346 /* bg */ = {
+			isa = PBXGroup;
+			children = (
+				CEF5C4FB1933866000393346 /* fond-1024x1024.jpg */,
+				CEF5C4FC1933866000393346 /* fond-1136x1136.jpg */,
+				CEF5C4FD1933866000393346 /* fond-2048x2048.jpg */,
+			);
+			name = bg;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,10 +335,33 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE65E08019348BF400D3BBC7 /* photo-12.jpg in Resources */,
 				CE7CF863193353D90027C76F /* Main_iPad.storyboard in Resources */,
+				CE65E07B19348BF400D3BBC7 /* photo-07.jpg in Resources */,
+				CEF5C4FF1933866000393346 /* fond-1136x1136.jpg in Resources */,
+				CEF5C5001933866000393346 /* fond-2048x2048.jpg in Resources */,
+				CE65E07F19348BF400D3BBC7 /* photo-11.jpg in Resources */,
+				CE65E07719348BF400D3BBC7 /* photo-03.jpg in Resources */,
+				CE65E08219348BF400D3BBC7 /* photo-14.jpg in Resources */,
+				CE65E07819348BF400D3BBC7 /* photo-04.jpg in Resources */,
+				CE65E07519348BF400D3BBC7 /* photo-01.jpg in Resources */,
+				CE65E08519348BF400D3BBC7 /* photo-17.jpg in Resources */,
+				CE65E07619348BF400D3BBC7 /* photo-02.jpg in Resources */,
+				CE65E08719348BF400D3BBC7 /* photo-19.jpg in Resources */,
+				CE65E08819348BF400D3BBC7 /* photo-20.jpg in Resources */,
+				CE65E07919348BF400D3BBC7 /* photo-05.jpg in Resources */,
+				CE65E08619348BF400D3BBC7 /* photo-18.jpg in Resources */,
+				CE65E08419348BF400D3BBC7 /* photo-16.jpg in Resources */,
+				CE65E08319348BF400D3BBC7 /* photo-15.jpg in Resources */,
 				CE7CF868193353D90027C76F /* Images.xcassets in Resources */,
+				CE65E07E19348BF400D3BBC7 /* photo-10.jpg in Resources */,
 				CE7CF860193353D90027C76F /* Main_iPhone.storyboard in Resources */,
+				CE65E07D19348BF400D3BBC7 /* photo-09.jpg in Resources */,
 				CE7CF857193353D90027C76F /* InfoPlist.strings in Resources */,
+				CEF5C4FE1933866000393346 /* fond-1024x1024.jpg in Resources */,
+				CE65E07C19348BF400D3BBC7 /* photo-08.jpg in Resources */,
+				CE65E08119348BF400D3BBC7 /* photo-13.jpg in Resources */,
+				CE65E07A19348BF400D3BBC7 /* photo-06.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,8 +381,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE7CF85D193353D90027C76F /* STPAppDelegate.m in Sources */,
+				CE57D73219335649008F9903 /* STPLayoutConstraintBuilder.m in Sources */,
 				CE7CF859193353D90027C76F /* main.m in Sources */,
 				CE7CF866193353D90027C76F /* STPViewController.m in Sources */,
+				CE57D72D19335571008F9903 /* STPImagierView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,6 +601,7 @@
 				CE7CF880193353D90027C76F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE7CF881193353D90027C76F /* Build configuration list for PBXNativeTarget "ImagierTests" */ = {
 			isa = XCConfigurationList;
@@ -481,6 +610,7 @@
 				CE7CF883193353D90027C76F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
