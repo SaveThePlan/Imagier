@@ -24,10 +24,7 @@
     float minScale;
     float maxScale;
     
-    float pictureScaleX;
-    float pictureScaleY;
-    
-    CGSize currentImageSize;
+    STPImageInfo * settings;
 }
 
 @end
@@ -44,8 +41,6 @@
         
         minScale = 0.01f;
         maxScale = 1.0f;
-        
-        pictureScaleX = pictureScaleY = 1.0f;
         
         /* setup widgets */
         [self setupPicturesStepper];
@@ -190,45 +185,46 @@
 
 
 /* ---- update view ---- */
--(void) newPictureToDisplay:(UIImage *)image withTitle:(NSString *)title {
-    currentImageSize = [image size];
+-(void) newPictureToDisplay:(UIImage *)image withSettings:(STPImageInfo *)imgSettings {
+    [settings release];
+    settings = [imgSettings retain];
     
     //set title
-    [pictureTitle setText:title];
+    [pictureTitle setText:[settings name]];
     
     //set image
     [pictureView setImage:image];
-    [pictureView setFrame:CGRectMake(0, 0, currentImageSize.width, currentImageSize.height)];
+    [pictureView setFrame:CGRectMake(0, 0, [settings size].width, [settings size].height)];
     [self addConstraints:[STPLayoutConstraintBuilder
                           insideLeftRightBorders:pictureView inside:pictureArea padding:0]];
     [self addConstraint:[STPLayoutConstraintBuilder
                          fixTop:pictureView toTop:pictureArea withConstant:0]];
     [self addConstraint:[STPLayoutConstraintBuilder
                          fixBottom:pictureView toBottom:pictureArea withConstant:0]];
-    float initialScale = (float)_maxInitialWidth / currentImageSize.width;
-    [pictureArea setZoomScale:initialScale];
+    [pictureArea setZoomScale:[settings unifiedScale]];
+    [self displayInfos];
 }
 
 -(void)widthSliderChange {
-    pictureScaleX = [widthSlider value];
+    [settings setScaleX:[widthSlider value]];
     [self flexibleScalePicture];
 }
 
 -(void)heightSliderChange {
-    pictureScaleY = [heightSlider value];
+    [settings setScaleY:[heightSlider value]];
     [self flexibleScalePicture];
 }
 
 -(void)flexibleScalePicture {
-    [pictureView setFrame:CGRectMake(0, 0, currentImageSize.width * pictureScaleX, currentImageSize.height * pictureScaleY)];
+    [pictureView setFrame:CGRectMake(0, 0, [settings calculateWidth], [settings calculateHeight])];
     [self displayInfos];
 }
 
 -(void)displayInfos {
-    [widthSlider setValue:pictureScaleX animated:YES];
-    [widthLabel setText:[NSString stringWithFormat:@"Largeur : %d %%", (int)(pictureScaleX * 100)]];
-    [heightSlider setValue:pictureScaleY animated:YES];
-    [heightLabel setText:[NSString stringWithFormat:@"Hauteur : %d %%", (int)(pictureScaleY * 100)]];
+    [widthSlider setValue:[settings scaleX] animated:YES];
+    [widthLabel setText:[NSString stringWithFormat:@"Largeur : %d %%", (int)([settings scaleX] * 100)]];
+    [heightSlider setValue:[settings scaleY] animated:YES];
+    [heightLabel setText:[NSString stringWithFormat:@"Hauteur : %d %%", (int)([settings scaleY] * 100)]];
 }
 
 /* ---- END update view ---- */
@@ -245,7 +241,7 @@
 }
 
 -(void)scrollViewDidZoom:(UIScrollView *)scrollView {
-    pictureScaleX = pictureScaleY = [scrollView zoomScale];
+    [settings setUnifiedScale:[scrollView zoomScale]];
     [self displayInfos];
 }
 
@@ -272,6 +268,7 @@
 }
 
 -(void)dealloc {
+    [settings release]; settings = nil;
     [pictureView release]; pictureView = nil;
     [picturesStepper release]; picturesStepper = nil;
     [pictureArea release]; pictureArea = nil;

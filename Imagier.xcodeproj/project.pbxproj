@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE269D77193DC447001963A3 /* STPImageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CE269D76193DC447001963A3 /* STPImageInfo.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CE57D72D19335571008F9903 /* STPImagierView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE57D72C19335571008F9903 /* STPImagierView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CE57D73219335649008F9903 /* STPLayoutConstraintBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = CE57D72F19335649008F9903 /* STPLayoutConstraintBuilder.m */; };
 		CE65E07519348BF400D3BBC7 /* photo-01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE65E06119348BF400D3BBC7 /* photo-01.jpg */; };
@@ -60,6 +61,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE269D75193DC447001963A3 /* STPImageInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPImageInfo.h; sourceTree = "<group>"; };
+		CE269D76193DC447001963A3 /* STPImageInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPImageInfo.m; sourceTree = "<group>"; };
 		CE57D72B19335571008F9903 /* STPImagierView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPImagierView.h; sourceTree = "<group>"; };
 		CE57D72C19335571008F9903 /* STPImagierView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPImagierView.m; sourceTree = "<group>"; };
 		CE57D72E19335649008F9903 /* STPLayoutConstraintBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPLayoutConstraintBuilder.h; sourceTree = "<group>"; };
@@ -199,6 +202,8 @@
 				CE7CF861193353D90027C76F /* Main_iPad.storyboard */,
 				CE7CF864193353D90027C76F /* STPViewController.h */,
 				CE7CF865193353D90027C76F /* STPViewController.m */,
+				CE269D75193DC447001963A3 /* STPImageInfo.h */,
+				CE269D76193DC447001963A3 /* STPImageInfo.m */,
 				CEF5C5011933866B00393346 /* images */,
 				CE57D72B19335571008F9903 /* STPImagierView.h */,
 				CE57D72C19335571008F9903 /* STPImagierView.m */,
@@ -381,6 +386,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE7CF85D193353D90027C76F /* STPAppDelegate.m in Sources */,
+				CE269D77193DC447001963A3 /* STPImageInfo.m in Sources */,
 				CE57D73219335649008F9903 /* STPLayoutConstraintBuilder.m in Sources */,
 				CE7CF859193353D90027C76F /* main.m in Sources */,
 				CE7CF866193353D90027C76F /* STPViewController.m in Sources */,

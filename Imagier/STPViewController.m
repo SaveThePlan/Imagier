@@ -9,14 +9,17 @@
 #import "STPViewController.h"
 #import "STPImagierView.h"
 #import "STPLayoutConstraintBuilder.h"
+#import "STPImageInfo.h"
 
 @interface STPViewController () {
     STPImagierView * mainView;
     BOOL isLandscape;
     BOOL isIpad;
     int margin;
+    int maxWidth;
     
     NSArray * imageNames;
+    NSMutableDictionary * activeImages;
 }
 
 @end
@@ -30,12 +33,13 @@
     
     //init vars
     imageNames = [[NSArray arrayWithObjects:
-                   @"photo-01.jpg", @"photo-02.jpg", @"photo-03.jpg", @"photo-04.jpg",
-                   @"photo-05.jpg", @"photo-06.jpg", @"photo-07.jpg", @"photo-08.jpg",
-                   @"photo-09.jpg", @"photo-10.jpg", @"photo-11.jpg", @"photo-12.jpg",
-                   @"photo-13.jpg", @"photo-14.jpg", @"photo-15.jpg", @"photo-16.jpg",
-                   @"photo-17.jpg", @"photo-18.jpg", @"photo-19.jpg", @"photo-20.jpg",
-                  nil] retain];
+                   @"photo-01", @"photo-02", @"photo-03", @"photo-04",
+                   @"photo-05", @"photo-06", @"photo-07", @"photo-08",
+                   @"photo-09", @"photo-10", @"photo-11", @"photo-12",
+                   @"photo-13", @"photo-14", @"photo-15", @"photo-16",
+                   @"photo-17", @"photo-18", @"photo-19", @"photo-20",
+                   nil] retain];
+    activeImages = [[NSMutableDictionary alloc]init];
     
     //init view
     isIpad = ( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad );
@@ -58,22 +62,27 @@
                                   duration:[[UIApplication sharedApplication] statusBarOrientationAnimationDuration]];
     
     //init first image
-//    [self sendPictureToView:[imageNames objectAtIndex:0]];
     [self stepperAction];
 
 }
 
 /* ---- ACTIONS ---- */
 
--(void)sendPictureToView:(NSString *)imageName {
-    UIImage * image = [[UIImage imageNamed:imageName] retain];
-    [mainView newPictureToDisplay:image withTitle:imageName];
+-(void)stepperAction {
+    NSString * imageName = [imageNames objectAtIndex:[mainView stepperValue]];
+    
+    NSString * filePath = [[NSBundle mainBundle] pathForResource:imageName ofType:@"jpg"];
+    UIImage * image = [[UIImage imageWithContentsOfFile:filePath] retain];
+    
+    STPImageInfo * imgSettings = [activeImages objectForKey:imageName];
+    if(imgSettings == nil) {
+        imgSettings = [[STPImageInfo alloc] initWithName:imageName andSize:[image size] forMaxWidth:maxWidth];
+        [activeImages setObject: imgSettings forKey:imageName];
+    }
+    
+    [mainView newPictureToDisplay:image withSettings:imgSettings];
     [image release];
     image = nil;
-}
-
--(void)stepperAction {
-    [self sendPictureToView:[imageNames objectAtIndex:[mainView stepperValue]]];
 }
 
 /* ----END ACTIONS ---- */
@@ -113,12 +122,13 @@
     
     if(isLandscape){
         [[self view] setFrame:CGRectMake(0, 0, screenBounds.size.height, screenBounds.size.width)];
-        [mainView setMaxInitialWidth:(screenBounds.size.height - 2 * margin)];
+        maxWidth = screenBounds.size.height - 2 * margin;
+//        [mainView setMaxInitialWidth:(screenBounds.size.height - 2 * margin)];
     } else {
         [[self view] setFrame:CGRectMake(0, 0, screenBounds.size.width, screenBounds.size.height)];
-        [mainView setMaxInitialWidth:(screenBounds.size.width - 2 * margin)];
+        maxWidth = screenBounds.size.width - 2 * margin;
+//        [mainView setMaxInitialWidth:(screenBounds.size.width - 2 * margin)];
     }
-
     
     [mainView drawForIpadDevice:isIpad inLandscape:isLandscape];
     [self stepperAction];
@@ -126,6 +136,7 @@
 
 
 -(void)dealloc {
+    [activeImages release]; activeImages = nil;
     [mainView release];mainView = nil;
     [imageNames release]; imageNames = nil;
     [super dealloc];
